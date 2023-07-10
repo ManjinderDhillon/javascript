@@ -245,3 +245,133 @@
 //   return accumu.concat(element);
 // });
 // console.log(flatArr);
+
+// String
+// const namee = "Manjindr";
+// console.log(namee);
+
+// String,prototype.lenght
+// const namee = "Manjinder Singh";
+// console.log(namee.length);
+
+// Escape Character
+// let anySentence = 'We are the so-called "vikings" from the north';
+// console.log(anySentence);
+
+// Alternative qoutes
+// let anySentence = 'We are the so-called "vikings" from the north';
+// console.log(anySentence);
+
+// Finding a String in a String
+// const bioData = "My name is Manjinder singh";
+// console.log(bioData.indexOf("Manjinder"));
+
+// Searching a String in a String
+// const bioData = "My name is Manjinder singh";
+// console.log(bioData.search("Manjinder"));
+
+// Extracting String Parts
+
+// There are 3 methods for extracting a part of a string
+// slice(start,end)
+// substring(start,end)
+// substr(start,length)
+
+// slice()
+// Extracts a part of a string and returns the extracted part in a new string.
+// takes two perameter: start and end
+// end is not included
+
+// var str = "Apple, Bnanana, Kiwi";
+// let res = str.slice(0, 4);
+// console.log(res);
+
+// var str = "Apple, Bnanana, Kiwi";
+// let rs = str.slice(7, -2);
+// console.log(rs);
+
+// Question
+// Display only 280 chracters of a String like the one used in Twitter
+
+// let myTweets =
+//   'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.';
+// const actual = myTweets.slice(0, 280);
+// console.log(actual);
+// console.log(actual.length);
+
+// substring()
+// similer to slice()
+// The difference is that substring() cannot accept negative indexes
+
+// var str = "Apple, Banana,kiwi";
+// console.log(str.substring(0, 4));
+
+// var str = "Apple, Banana,kiwi";
+// console.log(str.substring(7, -2));
+
+// substr()
+// substr() is similar to slice()
+// difference is second perameter specifies the lentgh of extracted part
+// var str = "Apple, Banana,kiwi";
+// console.log(str.substr(0, 4));
+// let res = str.substr(-4);
+// console.log(res);
+
+// Replacing String Content()
+// String.prototype.replace(searchFor,replaceWith)
+// the replace method replaces the specified value with another value in a string
+// returns new string
+
+// let myBioData = `I am Manjinder  Singh dhillon`;
+// const replaceData = myBioData.replace("dhillon", "Dhillon");
+// console.log(replaceData);
+
+// Extracting String Chracters
+
+// charAt(position)
+// charCodeAt(position)
+// property access[]
+
+// let str = "HELLO WORLD";
+// console.log(str.charAt(3));
+
+// let str = "HELLO WORLD";
+// console.log(str.charCodeAt(3));
+
+// property Access
+// var str = "HELLO WORLD";
+// console.log(str[2]);
+
+// Question
+// Return the unicode of last character in a string
+
+// let str = "HELLO WORLD";
+// const lastChar = str.length - 1;
+// console.log(str.charCodeAt(lastChar));
+
+// Other useful methods
+// let myName = "manjinder singh";
+// console.log(myName.toLocaleUpperCase());
+// console.log(myName.toLowerCase());
+
+// conacat()
+// joins two or more strings
+// let fName = "Manjinder";
+// let lName = "Dhillon";
+// console.log(fName.concat(lName));
+// console.log(fName.concat(" ", lName));
+
+// string.trim()
+// removes the whitespaces from both sides of a string
+
+// var str = "          Hellow world";
+// console.log(str);
+// console.log(str.trim());
+
+// Converting a strign into an array
+// split()
+
+// let txt = "a,b, | c,d,e";
+// console.log(txt.split(","));
+// console.log(txt.split(" "));
+// console.log(txt.split("|"));

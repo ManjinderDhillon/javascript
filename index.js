@@ -375,3 +375,110 @@
 // console.log(txt.split(","));
 // console.log(txt.split(" "));
 // console.log(txt.split("|"));
+
+// Async JS programming
+// Callbacks, Promises, async & Await
+
+const datas = [
+  { name: "Ajay", profession: "Software Engineer" },
+  { name: "Anuj", profession: "Software Engineer" },
+];
+
+// function getDatas() {
+//   setTimeout(() => {
+//     let output = "";
+//     datas.forEach((data, index) => {
+//       output += `<li>${data.name}</li>`;
+//     });
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
+
+// function createData(newData) {
+//   setTimeout(() => {
+//     datas.push(newData);
+//   }, 2000);
+// }
+// getDatas();
+// createData({ name: "Vivek", profession: "Software Engineer" });
+
+// problem solving using callback
+
+// function getDatas() {
+//   setTimeout(() => {
+//     let output = "";
+//     datas.forEach((data, index) => {
+//       output += `<li>${data.name}</li>`;
+//     });
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
+
+// function createData(newData, callback) {
+//   setTimeout(() => {
+//     datas.push(newData);
+//     callback();
+//   }, 2000);
+// }
+
+// createData({ name: "Vivek", profession: "Software Engineer" }, getDatas);
+
+// // problem solving using promises
+
+// function getDatas() {
+//   setTimeout(() => {
+//     let output = "";
+//     datas.forEach((data, index) => {
+//       output += `<li>${data.name}</li>`;
+//     });
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
+
+// function createData(newData) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       datas.push(newData);
+//       let error = false;
+//       if (!error) {
+//         resolve();
+//       } else {
+//         reject("kuch shi nhi hai");
+//       }
+//     }, 2000);
+//   });
+// }
+
+// createData({ name: "Vivek", profession: "Software Engineer" }).then(getDatas);
+
+// // problem solving using Async Z& Await
+
+function getDatas() {
+  setTimeout(() => {
+    let output = "";
+    datas.forEach((data, index) => {
+      output += `<li>${data.name}</li>`;
+    });
+    document.body.innerHTML = output;
+  }, 1000);
+}
+
+function createData(newData) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      datas.push(newData);
+      let error = false;
+      if (!error) {
+        resolve();
+      } else {
+        reject("Something went wrong");
+      }
+    }, 2000);
+  });
+}
+
+async function start() {
+  await createData({ name: "Vivek", profession: "Software Engineer" });
+  getDatas();
+}
+start();
